@@ -61,7 +61,11 @@ void testApp::draw()
 //--------------------------------------------------------------
 void testApp::keyPressed(int key){
 	if(key=='s')
+	{
+		cvConvertImage(disp,disp, CV_CVTIMG_SWAP_RB);
 		cvSaveImage("data/save.bmp", disp);
+		cvConvertImage(disp,disp, CV_CVTIMG_SWAP_RB);
+	}
 }
 
 //--------------------------------------------------------------
